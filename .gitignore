@@ -1,0 +1,32 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# JavaScript
+node_modules/
+dist/
+
+# Local/private data
+data/private/
+data/raw/
+local/
+*.local.json
+progress*.json
+
+# Personal media and source documents
+*.mp3
+*.wav
+*.m4a
+*.pdf
+
+# Temporary files
+*.tmp
+*.bak
