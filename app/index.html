@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f766e" />
+    <title>宅建士クイック○×トレーニング</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app-shell" class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">宅</div>
+          <div>
+            <div class="brand-title">宅建士クイック判定</div>
+            <div class="brand-subtitle">Takken Study Lab</div>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="メインナビゲーション">
+          <button class="nav-item active" data-view="dashboard"><span>⌂</span>学習状況</button>
+          <button class="nav-item" data-view="practice"><span>✓</span>問題演習</button>
+          <button class="nav-item" data-view="wrong"><span>↺</span>復習</button>
+          <button class="nav-item" data-view="stats"><span>▥</span>分類統計</button>
+          <button class="nav-item" data-view="settings"><span>⚙</span>データ設定</button>
+        </nav>
+
+        <div class="sidebar-note">
+          <span class="status-dot"></span>
+          <span>学習履歴はこのブラウザに保存</span>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button id="mobile-menu" class="icon-button mobile-only" aria-label="メニューを開く">☰</button>
+          <div>
+            <div class="eyebrow">ローカル演習</div>
+            <h1 id="page-title">学習状況</h1>
+          </div>
+          <div class="topbar-actions">
+            <div class="topbar-subject">
+              <label for="subject-switcher">科目</label>
+              <select id="subject-switcher" class="select" aria-label="科目を切り替える"><option>読み込み中…</option></select>
+            </div>
+            <span id="save-status" class="save-status">自動保存済み</span>
+            <button id="top-continue" class="button button-primary small">続きから再開</button>
+          </div>
+        </header>
+
+        <div id="notice" class="notice hidden" role="status"></div>
+        <section id="view-dashboard" class="view active-view"></section>
+        <section id="view-practice" class="view"></section>
+        <section id="view-wrong" class="view"></section>
+        <section id="view-stats" class="view"></section>
+        <section id="view-settings" class="view"></section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" role="status"></div>
+    <input id="import-file" type="file" accept="application/json" hidden />
+    <script src="app.js" defer></script>
+  </body>
+</html>
